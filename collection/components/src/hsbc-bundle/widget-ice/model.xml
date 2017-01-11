@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog totalSize="1">
+    <widget>
+        <name>Content-widget</name>
+        <tags>
+            <tag blacklist="false" manageable="true" type="section">content</tag>
+            <tag blacklist="false" manageable="true" type="regular">universal</tag>
+        </tags>
+        <lockState>UNLOCKED</lockState>
+        <properties>
+            <property label="Description" name="Description">
+                <value type="string">Universal content widget</value>
+            </property>
+            <property name="src" manageable="true">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+            <property label="Templates" name="templateList" manageable="true">
+                <value type="string">Simple template,$(itemRoot)/templates/simple.html,Article small,$(itemRoot)/templates/article-vertical.html,Article small color,$(itemRoot)/templates/article-vertical-colour.html,Article left,$(itemRoot)/templates/article-left.html,Article right,$(itemRoot)/templates/article-right.html,Banner,$(itemRoot)/templates/banner.html,Headline artice,$(itemRoot)/templates/headline-article.html,Headline banner,$(itemRoot)/templates/headline-banner.html,Image,$(itemRoot)/templates/image.html,Quote,$(itemRoot)/templates/quote.html,Overdraft Sub Heading,$(itemRoot)/templates/overdraft-sub-heading.html,Tell Me More,$(itemRoot)/templates/tell-me-more.html</value>
+            </property>
+            <property name="TemplateName">
+                <value type="string">Standard_Widget</value>
+            </property>
+            <property label="Widget Chrome" name="widgetChrome">
+                <value type="string">$(contextRoot)/static/backbase.com.2012.aurora/html/chromes/widget_none.html</value>
+            </property>
+            <property label="Title" name="title" viewHint="text-input,manager">
+                <value type="string">Custom ICE Widget</value>
+            </property>
+            <property name="thumbnailUrl" manageable="true">
+                <value type="string">$(itemRoot)/icon.png</value>
+            </property>
+            <property label="Template" name="templateUrl" viewHint="select-one,manager" manageable="true">
+                <value type="string">$(itemRoot)/templates/simple.html</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

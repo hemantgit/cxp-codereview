@@ -1,0 +1,33 @@
+{
+  "overdraft": {
+    "Name": "Business Primary Account",
+    "CustomerId": "12345678",
+    "BusinessAccounts": {
+      "BusinessAccount": [{
+        "AccountNumber": "63527283",
+        "SortCode": "12-33-23",
+        "IsPrimary": true,
+        "AvailableBalance": "£45,305",
+        "OverdraftLimitStart": "0",
+        "OverdraftLimitEnd": "£25,000",
+        "OverdraftAmount": "£25,000",
+        "OverdraftDue": {
+          "MonthlyFee": "12",
+          "Interest": "1.2"
+        }
+      }, {
+        "AccountNumber": "63527282",
+        "SortCode": "12-33-23",
+        "IsPrimary": false,
+        "AvailableBalance": "£15,225",
+        "OverdraftLimitStart": "0",
+        "OverdraftLimitEnd": "25k",
+        "OverdraftAmount": "25k",
+        "OverdraftDue": {
+          "MonthlyFee": "12",
+          "Interest": "1.2"
+        }
+      }]
+    }
+  }
+}

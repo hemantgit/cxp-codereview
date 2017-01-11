@@ -1,0 +1,57 @@
+{namespace templates_smartOverdraftTemplate}
+/**
+ * Container Template
+ * @param item Item in context
+ */
+{template .smartOverdraftTemplate}
+    <div class="bp-container smart-overdraft-template" data-pid="{$item.name}">
+        <header class="thick-bottom-border logo-container">
+            <div class="container">
+                <div class="row">
+                    <div class="bp-area smart-overdraft-template--area col-sm-2">
+                        {foreach $child in $item.children}
+                            {if parseInt($child.preferences.area.value) == 0}
+                                {include($child) |noAutoescape}
+                            {/if}
+                        {/foreach}
+                    </div>
+                    <div class="bp-area smart-overdraft-template--area col-sm-2">
+                        {foreach $child in $item.children}
+                            {if parseInt($child.preferences.area.value) == 1}
+                                {include($child) |noAutoescape}
+                            {/if}
+                        {/foreach}
+                    </div>
+                    <div class="bp-area smart-overdraft-template--area col-sm-4 col-sm-offset-4 text-right">
+                        {foreach $child in $item.children}
+                            {if parseInt($child.preferences.area.value) == 2}
+                                {include($child) |noAutoescape}
+                            {/if}
+                        {/foreach}
+                    </div>
+                    </div>
+                 </div>
+            </header>
+
+         <div class="container">
+             <div class="row">
+                   <div class="bp-area smart-overdraft-template--area col-sm-12">
+                       {foreach $child in $item.children}
+                          {if parseInt($child.preferences.area.value) == 3}
+                              {include($child) |noAutoescape}
+                          {/if}
+                       {/foreach}
+                   </div>
+              </div>
+             <div class="row">
+                    <div class="bp-area smart-overdraft-template--area col-sm-12">
+                          {foreach $child in $item.children}
+                               {if parseInt($child.preferences.area.value) == 4}
+                                   {include($child) |noAutoescape}
+                               {/if}
+                          {/foreach}
+                    </div>
+             </div>
+         </div>
+    </div>
+{/template}

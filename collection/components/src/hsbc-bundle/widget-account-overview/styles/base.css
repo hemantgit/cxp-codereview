@@ -1,0 +1,45 @@
+/*----------------------------------------------------------------*/
+/* Import Custom component widget
+/*----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------*/
+/* Basic widget styles
+/*----------------------------------------------------------------*/
+
+.lp-widget-account-overview .margin-left {
+margin-left: 20px;
+
+}
+.lp-widget-account-overview .anchor-color {
+    color: black;
+    font-size: 18px;
+
+}
+.lp-widget-account-overview .heading-fonts {
+    font-size: 22px;
+
+}
+.lp-widget-account-overview .right-arrow{
+    margin-left: 13px;
+    color: red;
+
+}
+.lp-widget-account-overview .account-overview-border:after{
+    border-bottom: 1px solid #c0c0c0;
+    width: 90%;
+    margin-top: 11px;
+    display: inline-block;
+    position: relative;
+    clear: both;
+
+}
+.lp-widget-account-overview .account-overview-border{
+   margin-top: 20px;
+}
+.lp-widget-account-overview .continue-btn-margin{
+    margin-top: 7px;
+
+}
+.lp-widget-account-overview{
+padding-top: 20px;
+}

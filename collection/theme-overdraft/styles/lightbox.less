@@ -1,0 +1,46 @@
+// Lighbox styles
+
+html:not(.bd-designMode-true ) {
+    .lp-aligner.lp-lightbox-on {
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 99 !important;
+        .lp-lightbox-container {
+            width: 72%;
+        }
+        .lp-lightbox-inner {
+
+            color: #fff;
+            font-size: 20px;
+            line-height: 1.6;
+            background: transparent;
+        }
+        .panel-title {
+            display: none;
+        }
+        h3, a {
+            color: #fff;
+        }
+        .glyphicon-menu-right {
+            &:before {
+                color: red;
+                font-size: 14px;
+            }
+        }
+        .panel.panel-chrome-default {
+            .panel-heading {
+                background-color: transparent;
+                border: none;
+            }
+        }
+        .lp-icon {
+            color: #fff;
+            font-size: 42px;
+        }
+        .bp-container {
+            position: relative;
+            z-index: 0;
+            padding: 0 35px 35px;
+        }
+    }
+}
+

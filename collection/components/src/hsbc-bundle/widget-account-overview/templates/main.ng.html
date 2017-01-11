@@ -1,0 +1,40 @@
+<div ng-controller="MainCtrl as mainCtrl">
+    <div class="row" ng-if="mainCtrl.display" style="    margin-top: 30px;">
+        <div class="col-xs-6" ng-if="mainCtrl.primaryAccount">
+            <h3 class="bold">{{mainCtrl.primaryBusinessHeading}}</h3>
+            <span class="font-20">{{mainCtrl.primaryAccount.SortCode}}</span>
+            <span class="margin-left font-20">{{mainCtrl.primaryAccount.AccountNumber}}</span>
+            <div class="row account-overview-border">
+                <div class="col-xs-6">
+                    <h6 class="text-colors font-19">{{mainCtrl.availableBalance}}</h6>
+                    <span class="font-35">{{mainCtrl.primaryAccount.AvailableBalance | currency: "£" : 0}}</span>
+                </div>
+                <div class="col-xs-6">
+                    <h6 class="text-colors font-19">{{mainCtrl.smartOverdraftLimit}}</h6>
+                    <span class="font-35">{{mainCtrl.primaryAccount.OverdraftAmount | currency: "£" : 0}}</span>
+                </div>
+
+            </div>
+            <div class="continue-btn-margin">
+                <a ng-click="mainCtrl.NavigateNextpage()" class="anchor-color">Continue</a><span class="glyphicon glyphicon-menu-right right-arrow"></span>
+            </div>
+        </div>
+        <div class="col-xs-4 col-xs-offset-2" ng-if="!businessAccount.IsPrimary">
+            <h3 class="bold">{{mainCtrl.secondaryBusinessHeading}}</h3>
+            <span class="font-20">{{mainCtrl.secondaryAccount.SortCode}}</span>
+            <span class="margin-left font-20">{{mainCtrl.secondaryAccount.AccountNumber}}</span>
+            <div class="row account-overview-border" >
+                <div class="col-xs-12">
+                    <h6 class="font-19 text-colors">{{mainCtrl.availableBalance}}</h6>
+                    <span class="font-35">{{mainCtrl.secondaryAccount.AvailableBalance | currency: "£" : 0}}</span>
+                </div>
+            </div>
+
+            <div class="continue-btn-margin">
+                <a ng-click="mainCtrl.NavigateNextpage()" class="anchor-color">Continue and Apply</a><span class="glyphicon glyphicon-menu-right right-arrow"></span>
+            </div>
+        </div>
+
+    </div>
+
+</div>

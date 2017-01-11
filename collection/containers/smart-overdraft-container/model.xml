@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+    <container>
+        <name>smart-overdraft-container</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="TemplateName">
+                <value type="string">smartOverdraftTemplate</value>
+            </property>
+            <property name="viewNamespace">
+                <value type="string">templates_smartOverdraftTemplate</value>
+            </property>
+            <property name="title" label="Title" viewHint="admin,designModeOnly">
+                <value type="string">Smart Overdraft Container</value>
+            </property>
+            <property name="config">
+                <value type="string">$(itemRoot)/config.xml</value>
+            </property>
+            <property name="csr">
+              <value type="boolean">false</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/media/icon.png</value>
+            </property>
+        </properties>
+        <tags>
+            <tag type="section">custom</tag>
+            <tag type="regular">lunchpad</tag>
+        </tags>
+    </container>
+</catalog>

@@ -1,0 +1,18 @@
+<div ng-controller="MainCtrl as mainCtrl">
+    <div class="slider-container">
+        <div class="field-group hide" >
+            <input type="text" ng-model="mainCtrl.OverdraftAmount">
+        </div>
+        <div round-slider=""
+             radius="250"
+             name="element.name"
+             ng-model="mainCtrl.OverdraftAmount"
+             min="0"
+             max="300000"
+             ng-if='mainCtrl.loadModal'></div>
+        <div class="slider-labels">
+            <div><span>Monthly Fee</span><br/><span>&pound;{{mainCtrl.monthyFee}}</span></div>
+            <div><span>Interest</span><br/><span>{{mainCtrl.interest}}&#37;</span></div>
+        </div>
+    </div>
+</div>
