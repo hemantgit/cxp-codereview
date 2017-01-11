@@ -7,20 +7,18 @@ define(function (require, exports, module) {
     'use strict';
     const DATA_EXCHANGE_EVENT = 'dataExchange';
     const BASE_PORTAL_SERVER_URL = 'http://localhost:7777/portalserver';
-    const PORTAL_NAME = '/overdraft';
+    const PORTAL_NAME = '/accountoverview-demo';
     const NEXT_PAGE='/limit-overview';
 
     const Preference = {
         PRIMARY_BUSINESS_HEADING: 'primaryBusinessHeading',
         SECONDARY_BUSINESS_HEADING: 'secondaryBusinessHeading',
         AVAILABLE_BALANCE: 'availableBalance',
-        SMART_OVERDRAFT_LIMIT: 'smartOverdraftLimit',
-        LOGO: 'logo'
+        SMART_OVERDRAFT_LIMIT: 'smartOverdraftLimit'
     };
 
     function MainCtrl(model, lpWidget, lpCoreUtils, $http,lpCoreBus,$window) {
         var ctrl = this;
-        ctrl.display = true;
         ctrl.primaryBusinessHeading = lpWidget.getPreference(Preference.PRIMARY_BUSINESS_HEADING);
         ctrl.secondaryBusinessHeading = lpWidget.getPreference(Preference.SECONDARY_BUSINESS_HEADING);
         ctrl.availableBalance = lpWidget.getPreference(Preference.AVAILABLE_BALANCE);
@@ -39,7 +37,6 @@ define(function (require, exports, module) {
                         ctrl.primaryAccount = businessAccount;
                         ctrl.accountNumber= ctrl.primaryAccount.AccountNumber;
                         ctrl.availableBal=parseInt(ctrl.primaryAccount.AvailableBalance)+100;
-                        console.log(ctrl.availableBal);
                     } else {
                         ctrl.secondaryAccount = businessAccount;
                     }

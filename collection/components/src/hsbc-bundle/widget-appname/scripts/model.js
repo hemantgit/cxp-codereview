@@ -5,11 +5,6 @@
 define( function (require, exports, module) {
 
     'use strict';
-
-    /**
-     * @constructor
-     * @ngInject
-     */
     function WidgetModel(lpWidget, lpCoreUtils) {
         var utils = lpCoreUtils;
         var state = {

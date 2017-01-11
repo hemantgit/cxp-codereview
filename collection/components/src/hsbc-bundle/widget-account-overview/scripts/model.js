@@ -8,6 +8,7 @@ define(function (require, exports, module) {
 
     function WidgetModel(lpWidget, lpCoreUtils, lpCoreBus, $q, $http) {
         const BASE_SERVICE_URL = 'http://localhost:8082/overdraft';
+
         var utils = lpCoreUtils;
 
         var state = {
@@ -24,9 +25,7 @@ define(function (require, exports, module) {
             var deferred = $q.defer();
             $http.get(BASE_SERVICE_URL + '/getCostmerDetailsAsJSONData')
                 .then(function (customerDetails) {
-                    console.log("inside the main page ");
                     deferred.resolve(customerDetails.data);
-                    console.log(customerDetails.data);
                 });
             return deferred.promise;
         };
@@ -36,10 +35,10 @@ define(function (require, exports, module) {
                 "accountNumber": accountNumber,
                 "availableBalance": availableBalance
             };
-            console.log(postData);
+
             return $http({
                 method: 'POST',
-                url: "http://localhost:8082/overdraft/updateCostmersDetails",
+                url:  BASE_SERVICE_URL+"/updateCostmersDetails",
                 data: postData,
                 headers: {
                     'Content-Type': 'application/json'

@@ -1,15 +1,7 @@
-/**
- * Controllers
- * @module controllers
- */
+
 define(function (require, exports, module) {
     'use strict';
     const DATA_EXCHANGE_EVENT = 'dataExchange';
-    /**
-     * Main controller
-     * @ngInject
-     * @constructor
-     */
     const Preference = {
         LIMIT_OVERVIEW_HEADING: 'limitOverviewHeading',
         LIMIT_OVERVIEW_LABEL: 'limitOverviewLabel',

@@ -14,14 +14,19 @@ define( function (require, exports, module) {
         var utils = lpCoreUtils;
         var state = {
             title: lpWidget.getPreference('title'),
-            icon: utils.resolvePortalPlaceholders(lpWidget.getPreference('thumbnailUrl')),
-
+            icon: utils.resolvePortalPlaceholders(lpWidget.getPreference('thumbnailUrl'))
         };
 
         var model = {};
+        /**
+         * @public
+         * @return {Object} current model state
+         */
         model.getState = function getState() {
             return state;
         };
+
+
         return model;
     }
 

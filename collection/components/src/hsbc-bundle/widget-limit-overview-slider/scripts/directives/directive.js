@@ -1,3 +1,4 @@
+
 define(function (require, exports) {
     'use strict';
 
@@ -18,8 +19,8 @@ define(function (require, exports) {
                 elem.roundSlider({
                     radius: scope.radius || 150,
                     circleShape: "half-top",
-                    startAngle: 317,
-                    endAngle: "+90",
+                    startAngle:317,
+                    endAngle:"+90",
                     sliderType: "min-range",
                     min: scope.min,
                     max: scope.max,
@@ -28,17 +29,16 @@ define(function (require, exports) {
                     width: 40,
                     animation: false,
                     editableTooltip: true,
-                    roundOff: 100,
+                    roundOff:100,
                     value: scope.ngModel || 0
 
                 });
 
-                function udpateModel() {
+                function udpateModel(){
                     scope.$apply(function () {
                         scope.ngModel = elem.data("roundSlider").getValue();
                     });
                 }
-
                 elem.bind('change', function () {
                     udpateModel();
                 });

@@ -1,25 +1,17 @@
-/**
- * Controllers
- * @module controllers
- */
+
 define(function (require, exports, module) {
 
     'use strict';
 
-    /**
-     * Main controller
-     * @ngInject
-     * @constructor
-     */
-    function MainCtrl(model, lpWidget, lpCoreUtils) {
-        this.state = model.getState();
-        this.utils = lpCoreUtils;
-        this.widget = lpWidget;
-    }
-
-    MainCtrl.prototype.$onInit = function() {
-        // Do initialization here
+    const Preference = {
+        PRIMARY_HEADING: 'primaryHeading',
+        SECONDARY_HEADING: 'secondaryHeading',
     };
+    function MainCtrl(model, lpWidget, lpCoreUtils,lpCoreBus) {
+        var ctrl=this;
+        ctrl.primaryHeading = lpWidget.model.getPreference(Preference.PRIMARY_HEADING);
+        ctrl.secondaryHeading = lpWidget.model.getPreference(Preference.SECONDARY_HEADING);
 
+    }
     module.exports = MainCtrl;
 });

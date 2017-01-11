@@ -6,7 +6,7 @@
 .rs-control {
     position: relative;
     outline: 0 none;
-    margin: 50px 0;
+    margin: 70px 0 50px;
 }
 
 .rs-container {
@@ -489,7 +489,8 @@ div.rs-block {
     width: 40px;
     border-radius: 67px;
 }
-.rs-inner-container .rs-path-color:before {
+
+.rs-path-color:before {
     content: "";
     position: absolute;
     bottom: -17px;

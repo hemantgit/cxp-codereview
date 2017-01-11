@@ -1,4 +1,8 @@
 <div ng-controller="MainCtrl as mainCtrl" class="overview-heading">
-    <h1 ng-bind="mainCtrl.state.mainHeading"> </h1>
-    <h4 ng-bind="mainCtrl.state.subHeading" class="text-color-grey"> </h4>
+    <div>
+        <h1> {{mainCtrl.primaryHeading}}</h1>
+        <h4  class="text-color-grey">{{mainCtrl.secondaryHeading}} </h4>
+
+    </div>
+
 </div>
