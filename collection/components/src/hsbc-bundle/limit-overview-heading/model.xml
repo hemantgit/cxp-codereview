@@ -21,6 +21,9 @@
             <property name="limitOverviewLabel" label="Limit Overview Label" viewHint="text-input,admin,manager,designModeOnly">
                 <value type="string">You can increase or decrease this overdraft amount anytime</value>
             </property>
+            <property name="getOverdraftUrl" label="Get Overdraft Url" viewHint="text-input,admin,designModeOnly">
+                <value type="string">http://localhost:8082/overdraft/getCostmerDetailsAsJSONData</value>
+            </property>
         </properties>
         <tags>
         </tags>

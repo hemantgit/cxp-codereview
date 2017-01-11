@@ -7,12 +7,12 @@ define(function (require, exports, module) {
     'use strict';
 
     function WidgetModel(lpWidget, lpCoreUtils, lpCoreBus, $q, $http) {
-        const BASE_SERVICE_URL = 'http://localhost:8082/overdraft';
         var utils = lpCoreUtils;
 
         var state = {
             title: lpWidget.getPreference('title'),
-            icon: utils.resolvePortalPlaceholders(lpWidget.getPreference('thumbnailUrl'))
+            icon: utils.resolvePortalPlaceholders(lpWidget.getPreference('thumbnailUrl')),
+            getOverdraftUrl:lpWidget.getPreference('getOverdraftUrl'),
         };
 
         var model = {};
@@ -22,7 +22,7 @@ define(function (require, exports, module) {
 
         model.getOverDraftDetails = function () {
             var deferred = $q.defer();
-            $http.get(BASE_SERVICE_URL + '/getCostmerDetailsAsJSONData')
+            $http.get(state.getOverdraftUrl)
                 .then(function (customerDetails) {
                     deferred.resolve(customerDetails.data);
                 });

@@ -27,7 +27,12 @@
             <property name="smartOverdraftLimit" label="Secondary Business Heading" viewHint="text-input,admin,designModeOnly">
                 <value type="string">Smart overdraft limit</value>
             </property>
-
+            <property name="getCustomerDeatilsUrl" label="Get Customer Details Url" viewHint="text-input,admin,designModeOnly">
+                <value type="string">http://localhost:8082/overdraft/getCostmerDetailsAsJSONData</value>
+            </property>
+            <property name="updateCustomerDetailsUrl" label="Update Customer Details Url" viewHint="text-input,admin,designModeOnly">
+                <value type="string">http://localhost:8082/overdraft/updateCostmersDetails</value>
+            </property>
         </properties>
         <tags>
         </tags>

@@ -13,9 +13,10 @@ define(function (require, exports, module) {
 
         var state = {
             title: lpWidget.getPreference('title'),
-            icon: utils.resolvePortalPlaceholders(lpWidget.getPreference('thumbnailUrl'))
+            icon: utils.resolvePortalPlaceholders(lpWidget.getPreference('thumbnailUrl')),
+            getCustomerDeatilsUrl:lpWidget.getPreference('getCustomerDeatilsUrl'),
+            updateCustomerDetailsUrl:lpWidget.getPreference('updateCustomerDetailsUrl'),
         };
-
         var model = {};
         model.getState = function getState() {
             return state;
@@ -23,7 +24,7 @@ define(function (require, exports, module) {
 
         model.getCutomerDetails = function () {
             var deferred = $q.defer();
-            $http.get(BASE_SERVICE_URL + '/getCostmerDetailsAsJSONData')
+            $http.get(state.getCustomerDeatilsUrl)
                 .then(function (customerDetails) {
                     deferred.resolve(customerDetails.data);
                 });
@@ -38,7 +39,7 @@ define(function (require, exports, module) {
 
             return $http({
                 method: 'POST',
-                url:  BASE_SERVICE_URL+"/updateCostmersDetails",
+                url:  state.updateCustomerDetailsUrl,
                 data: postData,
                 headers: {
                     'Content-Type': 'application/json'
