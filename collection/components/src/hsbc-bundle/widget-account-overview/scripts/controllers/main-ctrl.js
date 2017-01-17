@@ -6,7 +6,7 @@ define(function (require, exports, module) {
 
     'use strict';
     const DATA_EXCHANGE_EVENT = 'dataExchange';
-    const PORTAL_NAME = '/portalserver/accountoverview-demo';
+    const PORTAL_NAME = b$.portal.portalServer.serverURL + b$.portal.portalName;
     const NEXT_PAGE = '/limit-overview';
     const INCREASE_LIMIT = 100;
 
@@ -44,7 +44,6 @@ define(function (require, exports, module) {
                 });
             }
         });
-
         ctrl.NavigateNextpage = function () {
            model.sendingCustomerDetails(ctrl.CustomerId,ctrl.accountNumber,ctrl.availableBal)
                 .success(function (data, status) {
