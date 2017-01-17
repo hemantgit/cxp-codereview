@@ -2,6 +2,7 @@
 define(function (require, exports, module) {
     'use strict';
     const DATA_EXCHANGE_EVENT = 'dataExchange';
+
     const Preference = {
         LIMIT_OVERVIEW_HEADING: 'limitOverviewHeading',
         LIMIT_OVERVIEW_LABEL: 'limitOverviewLabel',
